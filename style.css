@@ -6,3 +6,13 @@ h2 {
         color: blue;
 		font-style:italic;
 }
+
+p {
+       color: goldenrod;
+	   font-weight: bold;
+
+}
+body {
+	   background-color: black;
+	   font-family: Georgia, 'Times New Roman', Times, serif;
+}

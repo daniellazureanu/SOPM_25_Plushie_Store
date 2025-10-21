@@ -1,20 +1,29 @@
-h1 {
-	color: red;
+
+h1{
+	font-size: 20px;
+	text-transform: uppercase;
+	padding-left: 10px;
+	color: #ff523b;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;	
+	 font-weight: 400;
+	 letter-spacing: 1px;
+
+}
+h2{
+	color: white;
+	padding-left: 20px;
+	text-decoration: underline;
+	letter-spacing: 2px;
 }
 
-h2 {
-        color: blue;
-		font-style:italic;
-}
-
-p {
-       color: goldenrod;
-	   font-weight: bold;
-
-}
 body {
 	   background-color:rgb(71, 70, 70);
-	   font-family: Georgia, 'Times New Roman', Times, serif;
+	   /* font-family: Georgia, 'Times New Roman', Times, serif; */
+	   font-family: 'BBH Sans Bogle', sans-serif; 
 	   margin:0;
 }
 
@@ -26,8 +35,129 @@ body {
 
 .plush_container{
 	display: flex;
+	gap: 8px;
+	padding-left: 8px;
 }
 
 .bara_navigare{
 	background-color:black;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
+
+.plush_container .plush_card{
+    border: solid 5px #ba3322;
+	background: #333333;
+	box-sizing: border-box;
+	border-radius: 10px;
+	transition: background 0.5s;
+}
+
+.plush_container .plush_card img{
+	transition: transform 0.4s ease;
+}
+
+.plush_container .plush_card:hover {
+    background: grey;
+}
+
+.plush_container .plush_card img:hover{
+	transform: scale(1.06);
+}
+
+.bara_navigare .left_side {
+	display: flex;
+	align-items: center;
+}
+
+.bara_navigare .right_side {
+	display: flex;
+	align-items: center;
+}
+
+cart{
+	display: flex;
+}
+.cart img{
+	height: 34px;
+}
+.bara_navigare .right_side .rightB{
+	text-decoration:none;
+	
+	display: inline-block;
+	background: #ff523b;
+	color: #fff;
+	padding: 7px 35px;
+	margin: 30px 5px;
+	border-radius: 30px;
+	transition: background 0.5s;
+}
+
+
+.bara_navigare .right_side a:hover{
+	background: #563434;
+}
+
+.plush_container .plush_card {
+	display: flex;
+	width: 16.6vw;
+	flex-direction: column;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+.plush_card .name{
+    color: white;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+	 letter-spacing: 0.5px;
+}
+
+.plush_card .description{
+	/* font-family: 'Times New Roman', Times, serif; */
+	color: whitesmoke;
+	font-size: 12px;
+}
+
+.plush_card .buy_container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.plush_card .buy_container .cart{
+	align-self: center;
+	padding-top: 5px;
+}
+
+.plush_card .buy_container .price{
+	color: #ff523b;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+	 letter-spacing: 1px;
+}
+
+
+/* * {
+	border: solid 1px red;
+	box-sizing: border-box;
+} */
+
+/* .bara_navigare{
+	display: inline-block;
+	background: #ff523b;
+	color: #fff;
+	padding: 8px 30px;
+	margin: 30px 0;
+	border-radius: 30px;
+} */

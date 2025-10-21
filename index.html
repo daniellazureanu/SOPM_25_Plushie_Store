@@ -4,26 +4,64 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css?v=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
 	<title></title>
 </head>
 <body>
 	
 	
 	<div class= "bara_navigare">
-		<nav>
-			<!-- Pagina unde se duce -->
+
+		<div class="left_side">
 			<a href="index.html">
-					 <img src = "images\Logo.png" height = "80" width = "80">
+					 <img src = "images\Logo.png" height = "80px" width = "80px">
 			</a>
-		</nav>
+			<h2>Plushies Store</h2>
+		</div>
+
+		<div class="right_side">
+			<!-- Pagina unde se duce -->
+			<a href="index.html" class="rightB">Home</a>
+			<a href="index.html" class="rightB">Products</a>
+			<a href="index.html" class="rightB">About</a>
+			<a href="index.html" class="rightB">Contact</a>
+			<a href="index.html" class="cart">
+				<img src = "images/cart.png"></img>
+			</a>
+		</div>
+	
 	</div>
 
-
+    <h1>POPULAR PLUSHIES</h1>
 
 	<div class= "plush_container">
-		<img src = "images\ado_plushy.png" id="plush"></img>
-		<img src = "images\GFreddy.png" id="plush"></img> 
-		<img src = "images\Foxy.png" id="plush"></img>
+	<!-- pentru fiecare plush -->
+		<div class="plush_card" id="ado">
+		    <img src = "images\ado_plushy.png"></img>
+			<div class="name">
+				Ado
+			</div>
+			<div class="description">
+				jsfksjfklsdhfksdjhkljk
+			</div>
+
+			<div class="buy_container">
+			<div class="price">
+				200lei
+			</div>
+			<a href="index.html" class="cart">
+				<img src = "images/cart.png"></img>
+			</a>
+		    </div>
+		</div>
+        <!-- pana aici -->
+		<div class="plush_card">
+		<img src = "images\GFreddy.png"></img>
+		</div>
+		<div class="plush_card">
+		<img src = "images\Foxy.png"></img>
+		</div>
 	</div>
+
 </body>
 </html>

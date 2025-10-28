@@ -178,3 +178,35 @@ html {
 	margin: 30px 0;
 	border-radius: 30px;
 } */
+
+.descriere {
+	color: #ff523b;
+	text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+	font-weight: 400;
+	font-size: 2rem;
+/*	font-family: sans-serif;*/
+	padding: 2rem;
+	border: solid 5px #ba3322;
+	background: #333333;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 99%;
+	align-self: center;
+}
+
+.contact {
+	font-size: 2rem;
+/*	font-family: sans-serif;*/
+	color: whitesmoke;
+	padding: 2rem;
+	border: solid 5px #ba3322;
+	background: #333333;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 99%;
+	align-self: center;	
+}

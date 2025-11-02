@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
+
+    <!-- The callback parameter is required, so we use console.debug as a noop -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu3PKgOkx--fmwNT1cfwzNeZlOpQq-jlw&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+</head>
+<body>
+    <div class= "bara_navigare">
+
+        <div class="left_side">
+            <a href="index.html">
+                     <img src = "images\Logo.png" height = "80px" width = "80px">
+            </a>
+            <h2 class="footer">&copy; 2025 Plushies Store</h2>
+        </div>
+
+        <div class="right_side">
+            <!-- Pagina unde se duce -->
+            <a href="index.html" class="rightB">Home</a>
+            <!-- <a href="#special" class="rightB">Products</a> -->
+            <a href="about.html" class="rightB">About</a>
+            <a href="contact.html" class="rightB">Contact</a>
+            <a href="index.html" class="cart">
+                <img src = "images/cart.png">
+            </a>
+        </div>
+    </div>
+
+    <div class="contact">
+    <h1>Whatsapp: +40 738 470 160</h1>
+    <h1>email: plushie_store@gmail.com</h1>
+    <h1>Locatie: Brasov, Romania</h1>
+    <h1>Adresa: General Mociulschi 36</h1>
+    </div>
+
+
+    <gmp-map center="45.652034, 25.608562" zoom="15" map-id="DEMO_MAP_ID" id=map>
+        <gmp-advanced-marker position="45.652034, 25.608562" title="My location"></gmp-advanced-marker>
+    </gmp-map>
+
+</body>
+</html>

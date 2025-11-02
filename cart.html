@@ -2,51 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Your Cart</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class= "bara_navigare">
+	<div class= "bara_navigare">
 
-    <div class="left_side">
-      <a href="index.html">
-           <img src = "images\Logo.png" height = "80px" width = "80px">
-      </a>
-      <h2>Plushies Store</h2>
-    </div>
+		<div class="left_side">
+			<a href="index.html">
+					 <img src = "images\Logo.png" height = "80px" width = "80px">
+			</a>
+			<h2>Plushies Store</h2>
+		</div>
 
-    <div class="right_side">
-      <!-- Pagina unde se duce -->
-      <a href="index.html" class="rightB">Home</a>
-      <a href="#special" class="rightB">Products</a>
-      <a href="about.html" class="rightB">About</a>
-      <a href="contact.html" class="rightB">Contact</a>
-      <a href="cart.html" class="cart">
-        <img src="images/cart.png" alt="Add to cart">
-      </a>
-    </div>
+		<div class="right_side">
+			<!-- Pagina unde se duce -->
+			<a href="index.html" class="rightB">Home</a>
+			<a href="about.html" class="rightB">About</a>
+			<a href="contact.html" class="rightB">Contact</a>
+			<a href="cart.html" class="cart">
+			  <img src="images/cart.png" alt="Add to cart">
+			</a>
+		</div>
 
-  </div>
+	</div>
   <h1>Your Shopping Cart</h1>
   <div id="cart-container"></div>
-  <script>
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const container = document.getElementById("cart-container");
 
-    if (cart.length === 0) {
-      container.innerHTML = "<p>Your cart is empty.</p>";
-    } else {
-      container.innerHTML = cart.map(item => `
-        <div class="cart-item">
-          <img src="${item.image}" width="80">
-          <div>
-            <h3>${item.name}</h3>
-            <p>Price: ${item.price} LEI</p>
-            <p>Quantity: ${item.quantity}</p>
-          </div>
-        </div>
-      `).join("");
-    }
-  </script>
+  <div class="checkout-container">
+     <button id="checkout-btn">Proceed to Checkout</button>
+    <div id="total"></div>
+
+  </div>
+
+  <script src="cart.js"></script>
 </body>
 </html>

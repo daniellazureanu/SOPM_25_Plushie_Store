@@ -1,3 +1,5 @@
+// localStorage.clear();
+
 const plushies = {
   popular: [
     { name: "Ado", price: 200, image: "images/ado_plushy.png", description: "Ado" },

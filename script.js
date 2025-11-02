@@ -2,29 +2,29 @@
 
 const plushies = {
   popular: [
-    { name: "Ado", price: 200, image: "images/ado_plushy.png", description: "Ado" },
-    { name: "GFreddy", price: 185, image: "images/GFreddy.png", description: "GFreddy" },
-    { name: "Miku", price: 250, image: "images/miku.png", description: "Miku" },
-    { name: "Foxy", price: 185, image: "images/Foxy.png", description: "Foxy" },
-    { name: "Teto", price: 250, image: "images/teto.png", description: "Teto" },
+    { name: "Ado", price: 200, image: "images/ado_plushy.png", description: "Pluș Ado moale și pufos." },
+    { name: "Golden Freddy", price: 185, image: "images/GFreddy.png", description: "Pluș Golden Freddy animatronic clasic." },
+    { name: "Miku", price: 250, image: "images/miku.png", description: "Pluș Miku, colorat și drăguț." },
+    { name: "Foxy", price: 185, image: "images/Foxy.png", description: "Pluș Foxy, animatronic clasic." },
+    { name: "Teto", price: 250, image: "images/teto.png", description: "Pluș teto, colorat și drăguț." },
   ],
 
   specials: [
-    { name: "Ado", price: 200, image: "images/ado_plushy.png", description: "Ado" },
-    { name: "Miku", price: 250, image: "images/miku.png", description: "Miku" },
-    { name: "Teto", price: 250, image: "images/teto.png", description: "Teto" },
+    { name: "Ado", price: 200, image: "images/ado_plushy.png", description: "Pluș Ado moale și pufos." },
+    { name: "Miku", price: 250, image: "images/miku.png", description: "Pluș Miku, colorat și drăguț." },
+    { name: "Teto", price: 250, image: "images/teto.png", description: "Pluș teto, colorat și drăguț." },
   ],
 
   fnaf: [
-    { name: "GFreddy", price: 185, image: "images/GFreddy.png", description: "GFreddy" },
-    { name: "Foxy", price: 185, image: "images/Foxy.png", description: "Foxy" },
-    { name: "Springtrap", price: 185, image: "images/springtrap.png", description: "Springtrap" },
+    { name: "GFreddy", price: 185, image: "images/GFreddy.png", description: "Pluș Golden Freddy animatronic clasic." },
+    { name: "Foxy", price: 185, image: "images/Foxy.png", description: "Pluș Foxy, animatronic clasic." },
+    { name: "Springtrap", price: 185, image: "images/springtrap.png", description: "Pluș SpringTrap, animatronic clasic." },
   ],
 
   anime: [
-    { name: "Marin", price: 195, image: "images/marin.png", description: "Marin" },
-    { name: "L", price: 195, image: "images/L.png", description: "L" },
-    { name: "Misa", price: 195, image: "images/misa.png", description: "Misa" },
+    { name: "Marin", price: 195, image: "images/marin.png", description: "Pluș anime Marin, moale și drăgălaș." },
+    { name: "L", price: 195, image: "images/L.png", description: "Pluș anime L, detaliat și colecționabil." },
+    { name: "Misa", price: 195, image: "images/misa.png", description: "Pluș anime Misa, moale și adorabil." },
   ],
 };
 

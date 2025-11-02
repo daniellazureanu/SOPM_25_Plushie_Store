@@ -92,6 +92,10 @@ body {
 	display: flex;
 }
 
+.add-to-cart img{
+	height: 34px;
+}
+
 .cart img {
 	height: 34px;
 }

@@ -34,9 +34,9 @@ function createPlushCard(plush) {
       <div class="description">${plush.description}</div>
       <div class="buy_container">
         <div class="price">${plush.price} LEI</div>
-        <a href="index.html" class="cart">
+        <button class="add-to-cart" data-name="${plush.name}" data-price="${plush.price}" data-image="${plush.image}">
           <img src="images/cart.png" alt="Add to cart">
-        </a>
+        </button>
       </div>
     </div>
   `;
@@ -51,4 +51,34 @@ function loadPlushies() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", loadPlushies);
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+function addToCart(plush) {
+  const existingItem = cart.find(item => item.name === plush.name);
+  
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ ...plush, quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${plush.name} added to cart!`);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadPlushies();
+
+  document.body.addEventListener("click", (e) => {
+    if (e.target.closest(".add-to-cart")) {
+      const button = e.target.closest(".add-to-cart");
+      const plush = {
+        name: button.dataset.name,
+        price: parseFloat(button.dataset.price),
+        image: button.dataset.image
+      };
+      addToCart(plush);
+    }
+  });
+});

@@ -1,3 +1,30 @@
+
+/* ------------------ animatie hr ------------------ */
+
+hr {
+    width: 80%;
+    margin: 30px auto;
+    height: 3px;
+    border: none;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1), #ff523b, rgba(255,255,255,0.1));
+    background-size: 200% 100%;
+    border-radius: 3px;
+    animation: glowline 3s linear infinite;
+}
+
+@keyframes glowline {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ------------------         ------------------ */
+
+h2 {
+    color: white;
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+
 h1 {
 	font-size: 20px;
 	text-transform: uppercase;
@@ -10,40 +37,22 @@ h1 {
 		1px 1px 0 black;
 	font-weight: 400;
 	letter-spacing: 1px;
-
 }
 
-h2 {
-    color: white;
-    padding-left: 20px;
-    letter-spacing: 2px;
-
-    opacity: 0; /* start invizibil */
-    transform: translateY(20px); /* start puțin jos */
-    animation: slideUpFade 1s ease forwards; /* animația */
-    animation-delay: 0.3s; /* întârziere */
+html {
+	scroll-behavior: smooth;
 }
 
 html, body {
 	background-color: rgb(71, 70, 70);
-	/* font-family: Georgia, 'Times New Roman', Times, serif; */
 	font-family: 'BBH Sans Bogle', sans-serif;
 	margin: 0;
-	user-select: none;
-
 	user-select: none;
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-	display: block;
+    display: flex, block;
     flex-direction: column;
-}
-
-#plush {
-	width: 20%;
-	height: 20%;
-
 }
 
 .plush_container {
@@ -61,6 +70,8 @@ html, body {
 	justify-content: space-between;
 }
 
+/* ------------------ animatie container beackground ------------------ */
+
 .plush_container .plush_card {
 	border: solid 5px #ba3322;
 	background: #333333;
@@ -68,18 +79,21 @@ html, body {
 	border-radius: 10px;
 	transition: background 0.5s;
 }
+.plush_container .plush_card:hover {
+	background: grey;
+}
+
+/* ------------------   animatie plus marire   ------------------ */
 
 .plush_container .plush_card img {
 	transition: transform 0.4s ease;
 }
 
-.plush_container .plush_card:hover {
-	background: grey;
-}
-
 .plush_container .plush_card img:hover {
 	transform: scale(1.06);
 }
+
+/* ------------------                 ------------------ */
 
 .bara_navigare .left_side {
 	display: flex;
@@ -92,14 +106,14 @@ html, body {
 	margin-right: 15px;
 }
 
+/* ------------------ animație logo rotire o singură dată ------------------ */
 
-/* --- animație logo rotire o singură dată --- */
 .left_side img {
     transition: transform 0.8s ease-in-out; /* păstrează tranziția lină */
 }
 
 .left_side:hover img {
-    animation: spinOnce 0.8s forwards; /* rotire o singură dată și rămâne rotit */
+    animation: spinOnce 0.8s infinite; /* rotire o singură dată și rămâne rotit */
 }
 
 
@@ -118,7 +132,6 @@ body {
     animation-delay: 0.2s;
 }
 
-/* Bara de navigare */
 .bara_navigare {
     opacity: 0;
     transform: translateY(-20px); /* intră de sus */
@@ -126,9 +139,7 @@ body {
     animation-delay: 0.4s;
 }
 
-
-/* Footer / div de jos */
-.footer {
+.titlul {
     opacity: 0;
     transform: translateY(20px); /* intră de jos */
     animation: slideFadeIn 1s forwards;
@@ -144,132 +155,18 @@ body {
 }
 
 /* Optional: easing mai smooth */
-body, .bara_navigare, .footer {
+body, .bara_navigare, .titlul {
     animation-timing-function: ease-out;
 }
-
-
-
-
-
-
-.contact {
-    width: 90%;        /* sau orice procent vrei, de exemplu 80% */
-    margin: 1rem auto; /* margină sus-jos 1rem, centrat pe orizontală */
-    padding: 2rem;
-    border: solid 5px #ba3322;
-    background: #333333;
-    border-radius: 10px;
-    color: whitesmoke;
-    font-size: 2rem;
-}
-
-
-
-/* --- Hero / Banner Animat --- */
-.hero {
-    background: linear-gradient(45deg, #ff523b, #ff9e5b);
-    color: white;
-    text-align: center;
-    padding: 4rem 2rem;
-    border-radius: 10px;
-    margin: 20px;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: slideDown 1.5s ease-out;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    animation: slideUp 1.5s ease-out;
-}
-
-/* --- Animații pentru hero --- */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* --- Top Plushies Grid --- */
-.top-plushies {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px 0;
-    flex-wrap: wrap;
-}
-
-.top-plushies .plush_card {
-    background: #333;
-    border: 5px solid #ba3322;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    width: 200px;
-    transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.top-plushies .plush_card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px #ff523b;
-}
-
-.top-plushies img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* --- Footer --- */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 50px;
-    border-top: 5px solid #ba3322;
-}
-
-footer .socials {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-footer .socials a img {
-    width: 30px;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-footer .socials a img:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 5px #ff523b);
-}
-
-
-.cart {
-	display: flex;
-}
+/* ------------------       ------------------ */
 
 .add-to-cart{
 	background: none;
 	border: none;
 }
+
+/* ------------------    cart glow       ------------------ */
+
 
 .cart img, .add-to-cart img {
 	height: 34px;
@@ -280,6 +177,8 @@ footer .socials a img:hover {
     filter: drop-shadow(0 0 4px #ff523b); /* glow portocaliu ca butonul */
     transform: scale(1.1); /* optional, pentru efect mai vizibil */
 }
+
+/* ------------------ butoane drepta sus, animatie ------------------ */
 
 .bara_navigare .right_side .rightB {
 	text-decoration: none;
@@ -295,10 +194,13 @@ footer .socials a img:hover {
 
 
 .bara_navigare .right_side .rightB:hover {
-	background: #563434; /* păstrează schimbarea de culoare */
-	transform: scale(1.05); /* face butonul puțin mai mare */
-	transition: transform 0.3s ease, background 0.3s ease; /* animația lină */
+	background: #563434;
+	transform: scale(1.05);
+	transition:  background 0.3s ease, transform 0.3s ease;
 }
+
+/* ------------------       ------------------ */
+
 
 .bara_navigare .right_side .cart {
     margin-left: 4px; /* lasă spațiu între ultimele butoane și cart */
@@ -350,61 +252,18 @@ footer .socials a img:hover {
 	letter-spacing: 1px;
 }
 
-hr {
-    width: 80%;
-    margin: 30px auto;
-    height: 3px;
-    border: none;
-    background: linear-gradient(90deg, rgba(255,255,255,0.1), #ff523b, rgba(255,255,255,0.1));
-    background-size: 200% 100%;
-    border-radius: 3px;
-    animation: glowline 3s linear infinite;
+.contact {
+    width: 90%;        /* sau orice procent vrei, de exemplu 80% */
+    margin: 1rem auto; /* margină sus-jos 1rem, centrat pe orizontală */
+    padding: 2rem;
+    border: solid 5px #ba3322;
+    background: #333333;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-size: 2rem;
 }
 
-@keyframes glowline {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-}
-
-
-
-html {
-	scroll-behavior: smooth;
-}
-
-/* * {
-	border: solid 1px red;
-	box-sizing: border-box;
-} */
-
-/* .bara_navigare{
-	display: inline-block;
-	background: #ff523b;
-	color: #fff;
-	padding: 8px 30px;
-	margin: 30px 0;
-	border-radius: 30px;
-} */
-
-.descriere {
-	color: #ff523b;
-	text-shadow:
-		-1px -1px 0 black,
-		1px -1px 0 black,
-		-1px 1px 0 black,
-		1px 1px 0 black;
-	font-weight: 400;
-	font-size: 2rem;
-/*	font-family: sans-serif;*/
-	padding: 2rem;
-	border: solid 5px #ba3322;
-	background: #333333;
-	box-sizing: border-box;
-	border-radius: 10px;
-	width: 99%;
-	align-self: center;
-}
-
+/* ------------------    harta animatie   ------------------ */
 gmp-map {
     margin: 1rem auto;
     height: 60%;
@@ -413,7 +272,6 @@ gmp-map {
     border-radius: 10px;  
     display: block;
 
-    opacity: 0; /* start invizibil */
     transform: translateY(20px); /* start puțin jos */
     animation: slideUpFade 1s ease forwards; /* animația */
     animation-delay: 0.5s; /* întârziere înainte să înceapă */
@@ -421,10 +279,26 @@ gmp-map {
 
 @keyframes slideUpFade {
     to {
-        opacity: 1;
         transform: translateY(0);
     }
 }
+/* ------------------                 ------------------ */
+
+
+/* * {
+	border: solid 1px red;
+	box-sizing: border-box;
+} */
+
+
+
+
+
+
+
+
+
+
 
 
 p {
@@ -564,4 +438,132 @@ input:focus {
 
 #place-order-btn:hover {
 	background: #27ae60;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Hero / Banner Animat --- */
+.hero {
+    background: linear-gradient(45deg, #ff523b, #ff9e5b);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: slideDown 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: slideUp 1.5s ease-out;
+}
+
+/* --- Animații pentru hero --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- Footer --- */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 50px;
+    border-top: 5px solid #ba3322;
+}
+
+footer .socials {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .socials a img {
+    width: 30px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+footer .socials a img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px #ff523b);
+}
+
+.top-plushies img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.descriere {
+	color: #ff523b;
+	text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
+	font-weight: 400;
+	font-size: 2rem;
+	padding: 2rem;
+	border: solid 5px #ba3322;
+	background: #333333;
+	box-sizing: border-box;
+	border-radius: 10px;
+	width: 99%;
+	align-self: center;
+}
+
+
+/* --- Top Plushies Grid --- */
+.top-plushies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.top-plushies .plush_card {
+    background: #333;
+    border: 5px solid #ba3322;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.top-plushies .plush_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #ff523b;
 }

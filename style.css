@@ -221,7 +221,7 @@ body, .bara_navigare, .footer {
     padding: 10px;
     text-align: center;
     width: 200px;
-    transition: transform 0.4s, box-shadow 0.4s;
+    transition: transform 0.7s, box-shadow 0.7s;
 }
 
 .top-plushies .plush_card:hover {
@@ -264,6 +264,9 @@ footer .socials a img:hover {
 
 .cart {
 	display: flex;
+}
+.top-plushies .plush_card .price {
+	color: lightblue;
 }
 
 .add-to-cart{

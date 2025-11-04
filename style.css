@@ -315,6 +315,50 @@ footer .socials a img:hover {
 	padding-bottom: 5px;
 	padding-right: 5px;
 }
+#team {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: lightcoral;
+}
+
+#team h2 {
+	font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team-member {
+  background: yellow;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 250px;
+  transition: transform 0.2s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+
+.team-member h3 {
+  color: blue;
+  margin-bottom: 20px;
+}
+
+.team-member p {
+  color: darkmagenta;
+  font-size: 14px;
+}
 
 .plush_card .name {
 	color: white;
